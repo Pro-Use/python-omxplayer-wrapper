@@ -43,8 +43,6 @@ class DBusConnection(object):
                                                 'org.mpris.MediaPlayer2.Player')
         self.properties_interface = self._interface(proxy,
                                                     'org.freedesktop.DBus.Properties')
-        self.properties_interface_get = self._interface(proxy,
-                                                   'org.freedesktop.DBus.Properties.Get')
 
     def _interface(self, proxy, interface):
         return dbus.Interface(proxy, interface)
