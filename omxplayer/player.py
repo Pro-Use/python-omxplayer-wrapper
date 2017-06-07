@@ -255,14 +255,13 @@ class OMXPlayer(object):
         return rate
 
     @_check_player_is_active
-    def set_rate(self, rate):
+    def setrate(self, rate):
         """
         Args:
             rate (float): Playback rate as multiplier
         """
         return float(self._get_properties_interface().Rate(
-            rate)
-        )
+            rate))
 
     @_check_player_is_active
     def volume(self):
@@ -514,6 +513,9 @@ class OMXPlayer(object):
 
     def _get_properties_interface(self):
         return self._connection.properties_interface
+
+    def _get_properties_interface_get(self):
+        return self._connection.properties_interface_get
 
     def quit(self):
         try:
