@@ -342,7 +342,7 @@ class OMXPlayer(object):
         Returns:
             str: The current playback rate
         """
-        return float(self._get_properties_interface().Playback_Rate())
+        return float(self._get_player_interface().Rate())
 
     """ PLAYER INTERFACE METHODS """
 
